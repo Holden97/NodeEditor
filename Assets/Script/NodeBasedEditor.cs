@@ -21,8 +21,24 @@ public class NodeBasedEditor : EditorWindow
     private void OnGUI()
     {
         DrawNodes();
+        ProcessNodeEvents(Event.current);
         ProcessEvents(Event.current);
         if (GUI.changed) Repaint();
+    }
+
+    private void ProcessNodeEvents(Event current)
+    {
+        if (nodes != null)
+        {
+            for (int i = 0; i < nodes.Count; i++)
+            {
+                bool guiChanged = nodes[i].ProcessEvent(current);
+                if (guiChanged)
+                {
+                    GUI.changed = true;
+                }
+            }
+        }
     }
 
     private void DrawNodes()
@@ -45,54 +61,6 @@ public class NodeBasedEditor : EditorWindow
                 {
                     ProcessContextMenu(e.mousePosition);
                 }
-                break;
-            case EventType.MouseUp:
-                break;
-            case EventType.MouseMove:
-                break;
-            case EventType.MouseDrag:
-                break;
-            case EventType.KeyDown:
-                break;
-            case EventType.KeyUp:
-                break;
-            case EventType.ScrollWheel:
-                break;
-            case EventType.Repaint:
-                break;
-            case EventType.Layout:
-                break;
-            case EventType.DragUpdated:
-                break;
-            case EventType.DragPerform:
-                break;
-            case EventType.DragExited:
-                break;
-            case EventType.Ignore:
-                break;
-            case EventType.Used:
-                break;
-            case EventType.ValidateCommand:
-                break;
-            case EventType.ExecuteCommand:
-                break;
-            case EventType.ContextClick:
-                break;
-            case EventType.MouseEnterWindow:
-                break;
-            case EventType.MouseLeaveWindow:
-                break;
-            case EventType.TouchDown:
-                break;
-            case EventType.TouchUp:
-                break;
-            case EventType.TouchMove:
-                break;
-            case EventType.TouchEnter:
-                break;
-            case EventType.TouchLeave:
-                break;
-            case EventType.TouchStationary:
                 break;
 
             default:
