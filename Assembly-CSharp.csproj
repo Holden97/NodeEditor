@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Script\NodeBasedEditor.cs" />
     <Compile Include="Assets\Script\Node.cs" />
+    <Compile Include="Assets\Script\ConnectionPoint.cs" />
+    <Compile Include="Assets\Script\Connection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
