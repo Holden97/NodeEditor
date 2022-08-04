@@ -8,3 +8,5 @@ UnityBookAsset/
 Logs/
 
 *.cache
+
+Assembly-CSharp.csproj

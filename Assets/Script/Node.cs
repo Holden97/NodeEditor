@@ -10,17 +10,32 @@ public class Node
     public Rect rect;
     public string title;
     public bool isDragged;
+    public bool isSelected;
 
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
 
     public GUIStyle style;
-    public Node(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint)
+    public GUIStyle defaultNodeStyle;
+    public GUIStyle selectedNodeStyle;
+    public Node(
+        Vector2 position,
+        float width,
+        float height,
+        GUIStyle nodeStyle,
+        GUIStyle selectedNodeStyle,
+        GUIStyle inPointStyle,
+        GUIStyle outPointStyle,
+        Action<ConnectionPoint> OnClickInPoint,
+        Action<ConnectionPoint> OnClickOutPoint)
     {
         rect = new Rect(position.x, position.y, width, height);
         this.style = nodeStyle;
         inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint);
         outPoint = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint);
+
+        defaultNodeStyle = nodeStyle;
+        this.selectedNodeStyle = selectedNodeStyle;
     }
 
     public void Drag(Vector2 delta)
@@ -42,13 +57,23 @@ public class Node
             case EventType.MouseDown:
                 if (e.button == 0)
                 {
+                    GUI.changed = true;
                     if (rect.Contains(e.mousePosition))
                     {
                         isDragged = true;
+                        isSelected = true; ;
+                        style = selectedNodeStyle;
                     }
-                    GUI.changed = true;
+                    else
+                    {
+                        isSelected = false;
+                        style = defaultNodeStyle;
+                    }
 
                 }
+                break;
+            case EventType.MouseUp:
+                isDragged = false;
                 break;
             case EventType.MouseDrag:
                 if (e.button == 0 && isDragged)

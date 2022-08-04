@@ -12,6 +12,7 @@ public class NodeBasedEditor : EditorWindow
     private List<Connection> connections;
 
     private GUIStyle nodeStyle;
+    private GUIStyle selectedNodeStyle;
     private GUIStyle inPointStyle;
     private GUIStyle outPointStyle;
 
@@ -39,7 +40,7 @@ public class NodeBasedEditor : EditorWindow
     {
         if (nodes != null)
         {
-            for (int i = 0; i < nodes.Count; i++)
+            for (int i = nodes.Count - 1; i >= 0; i--)
             {
                 bool guiChanged = nodes[i].ProcessEvent(current);
                 if (guiChanged)
@@ -90,7 +91,7 @@ public class NodeBasedEditor : EditorWindow
         {
             nodes = new List<Node>();
         }
-        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle,inPointStyle,outPointStyle,OnClickInPoint,OnClickOutPoint));
+        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint));
     }
 
     private void OnClickInPoint(ConnectionPoint inPoint)
@@ -153,6 +154,10 @@ public class NodeBasedEditor : EditorWindow
         nodeStyle = new GUIStyle();
         nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
         nodeStyle.border = new RectOffset(12, 12, 12, 12);
+
+        selectedNodeStyle = new GUIStyle();
+        selectedNodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1 on.png") as Texture2D;
+        selectedNodeStyle.border = new RectOffset(12, 12, 12, 12);
 
         inPointStyle = new GUIStyle();
         inPointStyle.normal.background = EditorGUIUtility.Load("builtin skins/darksin/images/btn left.png") as Texture2D;
