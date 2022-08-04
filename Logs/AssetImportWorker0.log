@@ -1,10 +1,10 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.6f1 (7da38d85baf6) revision 8233869'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22000) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16108 MB
+OS: 'Windows 11  (10.0.22000) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16261 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity Editor\2021.3.6f1\Editor\Unity.exe
+D:\Unity 2021.3.6f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,7 +15,7 @@ D:/GitRepo/NodeEditor
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61265
+56642
 Successfully changed project path to: D:/GitRepo/NodeEditor
 D:/GitRepo/NodeEditor
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,110 +47,109 @@ D:/GitRepo/NodeEditor
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 21.27 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 53.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.6f1 (7da38d85baf6)
-[Subsystems] Discovering subsystems at path D:/Unity Editor/2021.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity 2021.3.6f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/GitRepo/NodeEditor/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
     Vendor:   NVIDIA
-    VRAM:     6023 MB
-    Driver:   30.0.15.1264
+    VRAM:     12142 MB
+    Driver:   30.0.15.1165
 Initialize mono
-Mono path[0] = 'D:/Unity Editor/2021.3.6f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56116
+Mono path[0] = 'D:/Unity 2021.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity 2021.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity 2021.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001069 seconds.
+Register platform support module: D:/Unity 2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001790 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 20.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 40.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.385 seconds
+- Completed reload, in  0.931 seconds
 Domain Reload Profiling:
-	ReloadAssembly (385ms)
-		BeginReloadAssembly (48ms)
+	ReloadAssembly (932ms)
+		BeginReloadAssembly (112ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (270ms)
-			LoadAssemblies (47ms)
+		EndReloadAssembly (681ms)
+			LoadAssemblies (109ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (67ms)
+			SetupTypeCache (193ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (148ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (334ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (20ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (89ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				RefreshPlugins (41ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (198ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001357 seconds.
+Registered in 0.003335 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.555 seconds
+- Completed reload, in  1.145 seconds
 Domain Reload Profiling:
-	ReloadAssembly (556ms)
-		BeginReloadAssembly (75ms)
+	ReloadAssembly (1146ms)
+		BeginReloadAssembly (177ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (13ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (412ms)
-			LoadAssemblies (51ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (813ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (114ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (200ms)
+			SetupTypeCache (257ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (372ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (31ms)
-				ProcessInitializeOnLoadAttributes (144ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (1ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (58ms)
+				ProcessInitializeOnLoadAttributes (254ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.22 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1677 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (47.4 KB). Loaded Objects now: 2142.
-Memory consumption went from 71.9 MB to 71.9 MB.
-Total: 2.388300 ms (FindLiveObjects: 0.109900 ms CreateObjectMapping: 0.033200 ms MarkObjects: 2.190200 ms  DeleteObjects: 0.054100 ms)
+Unloading 19 unused Assets / (47.1 KB). Loaded Objects now: 2142.
+Memory consumption went from 71.8 MB to 71.8 MB.
+Total: 2.265600 ms (FindLiveObjects: 0.149700 ms CreateObjectMapping: 0.052200 ms MarkObjects: 1.994600 ms  DeleteObjects: 0.067900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -158,163 +157,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 251645.021947 seconds.
+  Time since last request: 1122154.862958 seconds.
   path: Assets/Script/Node.cs
   artifactKey: Guid(f44335b4e1976ac4398004b47a54c206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Node.cs using Guid(f44335b4e1976ac4398004b47a54c206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419ab1695d446208a43aaee4bd906f1f') in 0.042512 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2388.379155 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd64320ae9367070350fa2b44d6bd920f') in 0.009077 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.206281 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abdb9f08f021de8a91f227d7f9d0e1fa') in 0.001263 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.106417 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9dbb527dbfe6a632c989ac7e94dc66b') in 0.001512 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.560750 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554896e322b6774d8d2e45ce3758f778') in 0.001351 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.415125 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf709d6d89a5487de8514490e03850cf') in 0.001540 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 73.809044 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6f791ed9d44a05bda7ef3f64cbe5db') in 0.001913 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 122.068031 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91781b5d0c8de5a7c0ee2c13da5367cb') in 0.001517 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 20.479365 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '537efaef36ac2a2d08286fab36817d05') in 0.001671 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 49.102007 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2599def6a7a5e310d3e770d3c06cfe75') in 0.001436 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 36.154640 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24f0ba7cab5af6c0d31df2f0f0fbd9bb') in 0.001275 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.578676 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c07786a32672e03c31117a0d86290dd') in 0.001612 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.010204 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef8922382b75005d8a9d2e037e968792') in 0.001453 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.068335 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43dfa1ccde4baa934291ba207af661ba') in 0.001345 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 57.723812 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9f72146bc8789c37ed37bcc833ac536') in 0.001598 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 111.012361 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9a32e23ed4160135e5cee32168ee2a') in 0.001336 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 303.016124 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77693cfd930633d0a8683cbfe5cef5aa') in 0.001646 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 136.569668 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18db99c0c3876de9fdc561c3daa3f787') in 0.001213 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 69.859495 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f796338b1949fe6679f05f4180d20738') in 0.001272 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 40.645215 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7418eda9afaedcc19a01526da1268778') in 0.001237 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.603938 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84816295a228f8856866d77ea29a6d87') in 0.001276 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.288992 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3365841f7d46464e33515069b2859d7') in 0.001946 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 41.430590 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a631f8ea0262232c16ed74bf5aab13e') in 0.002073 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 91.386156 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03beb3140069d293f7ab9f15216a4095') in 0.001210 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.877492 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89d982a16e58197bdc89d6f0b577f4ee') in 0.001319 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.205990 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9f531589246569cd7a41467782eb7ea') in 0.001493 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 351.107984 seconds.
-  path: Assets/Script/NodeBasedEditor.cs
-  artifactKey: Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/NodeBasedEditor.cs using Guid(fe5cee37626aba145923bcbb38db3df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf652197a30d4f57804bda2f072a475a') in 0.001454 seconds 
+Start importing Assets/Script/Node.cs using Guid(f44335b4e1976ac4398004b47a54c206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786b2cd297eb9166d1c7b2dca32da8ce') in 0.020196 seconds 
