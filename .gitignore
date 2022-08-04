@@ -5,8 +5,7 @@ Temp/
 
 UnityBookAsset/
 
-Logs/
-
-*.cache
+/[Ll]ogs/
+/[Oo]bj/
 
 Assembly-CSharp.csproj
