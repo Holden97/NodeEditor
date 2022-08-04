@@ -91,7 +91,7 @@ public class NodeBasedEditor : EditorWindow
         {
             nodes = new List<Node>();
         }
-        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint));
+        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
 
     private void OnClickInPoint(ConnectionPoint inPoint)
@@ -179,5 +179,30 @@ public class NodeBasedEditor : EditorWindow
                 connections[i].Draw();
             }
         }
+    }
+
+    private void OnClickRemoveNode(Node node)
+    {
+        if (connections != null)
+        {
+            List<Connection> connectionsToRemove = new List<Connection>();
+
+            for (int i = 0; i < connections.Count; i++)
+            {
+                if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
+                {
+                    connectionsToRemove.Add(connections[i]);
+                }
+            }
+
+            for (int i = 0; i < connectionsToRemove.Count; i++)
+            {
+                connections.Remove(connectionsToRemove[i]);
+            }
+
+            connectionsToRemove = null;
+        }
+
+        nodes.Remove(node);
     }
 }
