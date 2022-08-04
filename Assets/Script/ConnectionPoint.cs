@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ConnectionPointType { In,Out}
-public class ConnectionPoint : MonoBehaviour
+public class ConnectionPoint
 {
     public Rect rect;
     public ConnectionPointType type;
