@@ -19,6 +19,9 @@ public class NodeBasedEditor : EditorWindow
     private ConnectionPoint selectedInPoint;
     private ConnectionPoint selectedOutPoint;
 
+    private Vector2 offset;
+    private Vector2 drag;
+
     [MenuItem("Window/Node Based Editor")]
     private static void OpenWindow()
     {
@@ -28,12 +31,76 @@ public class NodeBasedEditor : EditorWindow
 
     private void OnGUI()
     {
+        DrawGrid(20, 0.2f, Color.gray);
+        DrawGrid(100, 0.4f, Color.gray);
+
         DrawNodes();
         DrawConnections();
 
+        DrawConnectionLine(Event.current);
+
         ProcessNodeEvents(Event.current);
         ProcessEvents(Event.current);
+
         if (GUI.changed) Repaint();
+    }
+
+    private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
+    {
+        int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);
+        int heightDivs = Mathf.CeilToInt(position.height / gridSpacing);
+
+        Handles.BeginGUI();
+        Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
+
+        offset += drag * 0.5f;
+        Vector3 newOffset = new Vector3(offset.x % gridSpacing, offset.y % gridSpacing, 0);
+
+        for (int i = 0; i < widthDivs; i++)
+        {
+            Handles.DrawLine(new Vector3(gridSpacing * i, -gridSpacing, 0) + newOffset, new Vector3(gridSpacing * i, position.height, 0f) + newOffset);
+        }
+
+        for (int i = 0; i < heightDivs; i++)
+        {
+            Handles.DrawLine(new Vector3(-gridSpacing, gridSpacing * i, 0) + newOffset, new Vector3(position.width, gridSpacing * i, 0f) + newOffset);
+        }
+
+        Handles.color = Color.white;
+        Handles.EndGUI();
+    }
+
+    private void DrawConnectionLine(Event e)
+    {
+        if (selectedInPoint != null && selectedOutPoint == null)
+        {
+            Handles.DrawBezier(
+                selectedInPoint.rect.center,
+                e.mousePosition,
+                selectedInPoint.rect.center + Vector2.left * 50f,
+                e.mousePosition - Vector2.left * 50f,
+                Color.white,
+                null,
+                2f
+                );
+
+            GUI.changed = true;
+        }
+
+        if (selectedOutPoint != null && selectedInPoint == null)
+        {
+            Handles.DrawBezier(
+                selectedOutPoint.rect.center,
+                e.mousePosition,
+                selectedOutPoint.rect.center - Vector2.left * 50f,
+                e.mousePosition + Vector2.left * 50f,
+                Color.white,
+                null,
+                2f
+                );
+
+            GUI.changed = true;
+        }
     }
 
     private void ProcessNodeEvents(Event current)
@@ -64,6 +131,8 @@ public class NodeBasedEditor : EditorWindow
 
     private void ProcessEvents(Event e)
     {
+        drag = Vector2.zero;
+
         switch (e.type)
         {
             case EventType.MouseDown:
@@ -72,10 +141,29 @@ public class NodeBasedEditor : EditorWindow
                     ProcessContextMenu(e.mousePosition);
                 }
                 break;
-
+            case EventType.MouseDrag:
+                if (e.button == 1)
+                {
+                    OnDrag(e.delta);
+                }
+                break;
             default:
                 break;
         }
+    }
+
+    private void OnDrag(Vector2 delta)
+    {
+        drag = delta;
+        if (nodes != null)
+        {
+            foreach (var node in nodes)
+            {
+                node.Drag(delta);
+            }
+        }
+
+        GUI.changed = true;
     }
 
     private void ProcessContextMenu(Vector2 mousePosition)
