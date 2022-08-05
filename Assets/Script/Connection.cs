@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Connection : MonoBehaviour
+public class Connection 
 {
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
