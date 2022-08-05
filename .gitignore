@@ -2,12 +2,8 @@ Library/
 Temp/
 UnityBookAsset/
 [Oo]bj/
-Assembly-CSharp.csproj
 [Ll]ogs/
 *.csproj
-
-obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-
+*.cache
 *.sln
-
-.vs/NodeEditor/v17/.suo
+*.suo
