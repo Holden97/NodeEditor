@@ -4,36 +4,40 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Connection 
+namespace NodeBasedEditor
 {
-    public ConnectionPoint inPoint;
-    public ConnectionPoint outPoint;
-    public Action<Connection> OnClickRemoveConnection;
-
-    public Connection(ConnectionPoint inPoint, ConnectionPoint outPoint, Action<Connection> OnClickRemoveConnection)
+    public class Connection
     {
-        this.inPoint = inPoint;
-        this.outPoint = outPoint;
-        this.OnClickRemoveConnection = OnClickRemoveConnection;
-    }
+        public ConnectionPoint inPoint;
+        public ConnectionPoint outPoint;
+        public Action<Connection> OnClickRemoveConnection;
 
-    public void Draw()
-    {
-        Handles.DrawBezier(
-            inPoint.rect.center,
-            outPoint.rect.center,
-            inPoint.rect.center + Vector2.left * 50f,
-            outPoint.rect.center + Vector2.left * 50f,
-            Color.white,
-            null,
-            2f);
-
-        if (Handles.Button((inPoint.rect.center + outPoint.rect.center) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
+        public Connection(ConnectionPoint inPoint, ConnectionPoint outPoint, Action<Connection> OnClickRemoveConnection)
         {
-            if (OnClickRemoveConnection != null)
+            this.inPoint = inPoint;
+            this.outPoint = outPoint;
+            this.OnClickRemoveConnection = OnClickRemoveConnection;
+        }
+
+        public void Draw()
+        {
+            Handles.DrawBezier(
+                inPoint.rect.center,
+                outPoint.rect.center,
+                inPoint.rect.center + Vector2.left * 50f,
+                outPoint.rect.center + Vector2.left * 50f,
+                Color.white,
+                null,
+                2f);
+
+            if (Handles.Button((inPoint.rect.center + outPoint.rect.center) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
             {
-                OnClickRemoveConnection(this);
+                if (OnClickRemoveConnection != null)
+                {
+                    OnClickRemoveConnection(this);
+                }
             }
         }
     }
 }
+
